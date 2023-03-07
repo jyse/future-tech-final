@@ -1,0 +1,23 @@
+{
+  "name": "Beetles",
+  "description": "Love to wreck and break stuff",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/6.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mint green"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White and mint green mixed"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big grey green eyes"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "A white jumpsuit with all kind of technology in it"
+    }
+  ]
+}

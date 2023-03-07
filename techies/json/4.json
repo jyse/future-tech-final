@@ -1,0 +1,23 @@
+{
+  "name": "Rappies",
+  "description": "They love rap music and to dance to reggaeton",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/4.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White matte"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Different colors and in different amounts"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Yellow visible joints"
+    }
+  ]
+}

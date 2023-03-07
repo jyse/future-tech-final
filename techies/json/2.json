@@ -1,0 +1,23 @@
+{
+  "name": "Snorkels",
+  "description": "Like to eat cake and lollipops",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/2.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Baby Blue"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White with a gold shine to it"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "More like a window"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Antenne that lets them communicate with each other"
+    }
+  ]
+}

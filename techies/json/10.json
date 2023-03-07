@@ -1,0 +1,23 @@
+{
+  "name": "Girlies",
+  "description": "Loves to dance and paint",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/10.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot",
+      "value": "White matte"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big black pupil with lightblue iris"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Cool boots"
+    }
+  ]
+}

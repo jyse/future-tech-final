@@ -1,0 +1,23 @@
+{
+  "name": "Kirbies",
+  "description": "Loves to watch Netflix and eat popcorn together",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/9.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White  matte"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Round that give red light when angry"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Grey joints made of iron"
+    }
+  ]
+}

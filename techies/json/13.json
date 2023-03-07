@@ -1,0 +1,23 @@
+{
+  "name": "Halos",
+  "description": "Loves to go to parties and play guitar",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/13.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White matte"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big black pupil with lightblue iris"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Antennes on top of the head and cool knee protectors"
+    }
+  ]
+}

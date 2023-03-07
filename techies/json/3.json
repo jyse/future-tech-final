@@ -1,0 +1,23 @@
+{
+  "name": "Geeks",
+  "description": "They love to solve puzzles",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/3.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Very minty green"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "Shiny white"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Minty green glass protected"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Little pink pastel shoes"
+    }
+  ]
+}

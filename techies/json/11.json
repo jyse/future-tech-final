@@ -1,0 +1,23 @@
+{
+  "name": "Sharkies",
+  "description": "Loves to know everything about technology",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/11.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "Shiny white"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Square and frog green"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Square on top of the head"
+    }
+  ]
+}

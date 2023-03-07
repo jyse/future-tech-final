@@ -1,0 +1,23 @@
+{
+  "name": "Smokies",
+  "description": "Love to sleep all day",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/5.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Minty green"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White matte with a pattern on it"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Oil slick Square eyes"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "White earphones that can also be extended as antennes"
+    }
+  ]
+}

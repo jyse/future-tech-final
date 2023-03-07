@@ -1,0 +1,23 @@
+{
+  "name": "Robot Moonies",
+  "description": "They love watching anime and eat candy",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/0.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "trait_value": "Minty"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Eye shape can vary in squares, circles or rectangles"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Pink earphones and antenne"
+    }
+  ]
+}

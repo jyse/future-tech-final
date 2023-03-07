@@ -1,0 +1,23 @@
+{
+  "name": "Rookies",
+  "description": "Love to watch horror movies ",
+  "image": "ipfs://QmNZkcTjM99v1uaXx8H8Fw23gWAzvC31NvFqr5ttmampzp/7.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Mintgreen"
+    },
+    {
+      "trait_type": "Robot color",
+      "value": "White matte with yellow, green and rosegold accents"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "One dark green and one black eye"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Little wheels underneath their feet"
+    }
+  ]
+}
