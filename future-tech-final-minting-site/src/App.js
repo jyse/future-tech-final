@@ -1,12 +1,13 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import background from "./assets/bg.png";
 import nftImage from "./assets/techie.png";
-// import nftImage from "./assets/DevBot.png";
-// import StartMinting from "./components/StartMinting";
-// import InProgressMinting from "./components/InProgressMinting";
-// import CompletedMinting from "./components/CompletedMinting";
+import StartMinting from "./components/StartMinting";
+import InProgressMinting from "./components/InProgressMinting";
+import CompletedMinting from "./components/CompletedMinting";
+import { ethers } from "ethers";
+import abi from "./manual/abi.json";
 
 function App() {
   const [inProgress, setInProgress] = useState(false);
@@ -17,53 +18,64 @@ function App() {
   const [hash, setHash] = useState();
 
   const mint = async () => {
-    // Step 6: Write the mint function
-    //
-    // Step 9: Set the variables for progress and completed
-    // setInProgress(true)
-    //  await transaction.wait()
-    //  setInProgress(false)
-    //  setCompleted(true)
+    console.log("minting");
+    const payload = { value: ethers.utils.parseEther("0.01") };
+    const transaction = await contract.safeMint(payload);
+
+    console.log("hash", transaction.hash);
+    setHash(transaction.hash);
+
+    setInProgress(true);
+    await transaction.wait();
+    setInProgress(false);
+    setCompleted(true);
   };
 
   const getTotalSupply = async () => {
-    // Step 5: Contract => getTotalSupply()
+    const totalSupply = await contract.totalSupply();
+    setSupply(totalSupply.toNumber());
   };
 
-  // Step 5: Contract => getTotalSupply()
+  useEffect(() => {
+    getTotalSupply();
+  }, [contract]);
 
   const login = async () => {
-    // Step 2: Connect wallet (check Metamask + accounts)
-
     if (typeof window.ethereum !== "undefined") {
-      console.log("yayy, Metamask is installed!");
+      console.log("Metamask is installed!");
 
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts"
       });
 
       const walletAccount = accounts[0];
-      console.log("hello 🐼: ", walletAccount);
+      console.log("🐼Wallet account: ", walletAccount);
       setAccount(walletAccount);
-    }
 
-    // Step 4: Wire up contract (provider, signer, NFTContract)
+      const contractAddress = "0xcABcD44A3a46F34399942fD2CC50c79C18b5b775";
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner(walletAccount);
+
+      let NFTContract = new ethers.Contract(contractAddress, abi, signer);
+      console.log("📝Contract: ", NFTContract);
+      setContract(NFTContract);
+    }
   };
 
-  // const getState = () => {
-  //   if (inProgress) {
-  //     // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
-  //     return <InProgressMinting />;
-  //   }
+  const getState = () => {
+    if (inProgress) {
+      // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
+      return <InProgressMinting />;
+    }
 
-  //   if (completed) {
-  //     // Step 12: Check this component
-  //     return <CompletedMinting />;
-  //   }
+    if (completed) {
+      // Step 12: Check this component
+      return <CompletedMinting />;
+    }
 
-  //   // Step 8: Pass mint as props
-  //   return <StartMinting />;
-  // };
+    // Step 8: Pass mint as props
+    return <StartMinting mint={mint} />;
+  };
 
   return (
     <div className="app">
@@ -82,9 +94,13 @@ function App() {
               </div>
               <div className="details-actions">
                 <p> 0 / 13 minted </p>
-                <div className="button connect" onClick={login}>
-                  Connect Wallet
-                </div>
+                {account ? (
+                  getState()
+                ) : (
+                  <div className="button connect" onClick={login}>
+                    Connect Wallet
+                  </div>
+                )}
               </div>
             </div>
             <div className="nft-section">
