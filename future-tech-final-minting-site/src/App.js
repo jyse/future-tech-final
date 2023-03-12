@@ -14,12 +14,13 @@ function App() {
   const [completed, setCompleted] = useState(false);
   const [account, setAccount] = useState();
   const [contract, setContract] = useState();
+  const [contractAddress, setContractAddress] = useState();
   const [supply, setSupply] = useState(0);
   const [hash, setHash] = useState();
 
   const mint = async () => {
     console.log("minting");
-    const payload = { value: ethers.utils.parseEther("0.01") };
+    const payload = { value: ethers.utils.parseEther("0.001") };
     const transaction = await contract.safeMint(payload);
 
     console.log("hash", transaction.hash);
@@ -52,7 +53,7 @@ function App() {
       console.log("🐼Wallet account: ", walletAccount);
       setAccount(walletAccount);
 
-      const contractAddress = "0xcABcD44A3a46F34399942fD2CC50c79C18b5b775";
+      const contractAddress = "0xE4acf0213Bfd368576f129e17C5E4dF4073aB5ff";
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner(walletAccount);
 
@@ -65,7 +66,7 @@ function App() {
   const getState = () => {
     if (inProgress) {
       // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
-      return <InProgressMinting />;
+      return <InProgressMinting hash={hash} />;
     }
 
     if (completed) {
@@ -93,7 +94,7 @@ function App() {
                 <h1>FutureTechies</h1>
               </div>
               <div className="details-actions">
-                <p> 0 / 13 minted </p>
+                <p> {supply} / 13 minted </p>
                 {account ? (
                   getState()
                 ) : (

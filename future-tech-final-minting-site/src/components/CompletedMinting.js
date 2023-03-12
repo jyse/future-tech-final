@@ -3,10 +3,10 @@ import React from "react";
 const CompletedMinting = () => {
   const viewOpenSea = () => {
     // Step 13: View your collectionnpm  on Testnet OpenSea
-    const url = "https://testnets.opensea.io/collection/{collectionName}";
+    const url = "https://testnets.opensea.io/collection/futuretechies";
 
     // Step 14: In case you DON'T SEE your collection on Testnet OpenSea
-    const nftURL =
+    const nftUrl =
       "https://testnets.opensea.io/assets/goerli/<contractAddress>/0";
 
     window.open(url, "_blank");
